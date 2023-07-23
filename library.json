@@ -1,0 +1,26 @@
+{
+  "name": "mpEEPROM",
+  "version": "0.0.1",
+    "description": "A Library to implement Arduino build in EEPROM class wrapper. Supported and tested on AVR boards(ATmega168/328, ATmega16u4/32u4 and ATmega2560)",
+  "keywords": "eeprom, memory, hardware",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/mediapills/EEPROM"
+  },
+  "authors":
+  [
+    {
+      "name": "Andrew Yatskovets",
+      "email": "contact@mediapills.com",
+      "url": "https://mediapills.com",
+      "maintainer": true
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://mediapills.com",
+  "headers": "mpEEPROM.h",
+  "dependencies": {},
+  "frameworks": "Arduino",
+  "platforms": "atmelavr,atmelmegaavr"
+}
