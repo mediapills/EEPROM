@@ -1,7 +1,7 @@
 /*!
  *  @file       mpEEPROM.h
  *  Project     mediapills::hardware
- *  @brief      Push Button Rotary Encoder handlers for Arduino platform.
+ *  @brief      A Library to implement Arduino build in EEPROM class wrapper.
  *  @version    0.0.1
  *  @author     Andrew Yatskovets
  *  @date       16/07/2023
@@ -32,6 +32,21 @@
 #include "Arduino.h"
 
 namespace mediapills { namespace hardware {
+
+class mpEEPROMClass {
+  private:
+    int idx;
+
+  public:
+    // constructor
+    mpEEPROMClass(int idx = 0);
+
+    void setAddress(int idx);
+    void init(int idx);
+
+    void save(uint8_t val);
+    uint8_t load();
+};
 
 }} // end namespace mediapills::hardware
 
