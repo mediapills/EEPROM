@@ -5,7 +5,8 @@
  *  @version    0.0.1
  *  @author     Andrew Yatskovets
  *  @date       16/07/2023
- *  @license    MIT - (c) 2023 - Mediapills
+ *
+ * Copyright (c) 2023 MediaPills
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -23,26 +24,17 @@
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE. 
+ * DEALINGS IN THE SOFTWARE.
  */
-
-#include "Arduino.h"
-#include <EEPROM.h>
 
 #include "mpEEPROM.h"
 
-namespace mediapills { namespace hardware {
+#include "Arduino.h"
 
-mpEEPROMClass::mpEEPROMClass(int idx = 0) {
-  setAddress(idx);
-}
+namespace mediapills {
+namespace hardware {
 
-void mpEEPROMClass::setAddress(int idx) {
-  Serial.print("mpEEPROMClass set address idx => ");
-  Serial.println(idx);
-
-  this->idx = idx;
-}
+void mpEEPROMClass::setAddress(uint8_t idx) { this->idx = idx; }
 
 uint8_t mpEEPROMClass::load() {
   uint8_t val = 0;
@@ -65,4 +57,5 @@ void mpEEPROMClass::save(uint8_t val) {
   Serial.println(val);
 }
 
-}} // end namespace mediapills::hardware
+}  //  namespace hardware
+}  //  namespace mediapills
