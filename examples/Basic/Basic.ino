@@ -5,7 +5,8 @@
  *  @version    0.0.1
  *  @author     Andrew Yatskovets
  *  @date       16/07/2023
- *  @license    MIT - (c) 2023 - Mediapills
+ *
+ * Copyright (c) 2023 MediaPills
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
