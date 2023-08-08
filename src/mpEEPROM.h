@@ -5,7 +5,8 @@
  *  @version    0.0.1
  *  @author     Andrew Yatskovets
  *  @date       16/07/2023
- *  @license    MIT - (c) 2023 - Mediapills
+ *
+ * Copyright (c) 2023 MediaPills
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -31,23 +32,25 @@
 
 #include "Arduino.h"
 
-namespace mediapills { namespace hardware {
+namespace mediapills {
+namespace hardware {
 
 class mpEEPROMClass {
-  private:
-    int idx;
+ private:
+  int idx;
 
-  public:
-    // constructor
-    mpEEPROMClass(int idx = 0);
+ public:
+  // constructor
+  mpEEPROMClass(uint8_t idx = 0) { setAddress(idx); };
 
-    void setAddress(int idx);
-    void init(int idx);
+  void setAddress(uint8_t idx);
+  void init(int idx);
 
-    void save(uint8_t val);
-    uint8_t load();
+  void save(uint8_t val);
+  uint8_t load();
 };
 
-}} // end namespace mediapills::hardware
+}  //  namespace hardware
+}  //  namespace mediapills
 
 #endif
